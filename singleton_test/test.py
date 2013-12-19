@@ -1,7 +1,7 @@
 __author__ = 'reyoung'
 
 import unittest
-from singleton.singleton import Singleton
+from singleton.singleton import Singleton, ThreadSafeSingleton
 
 
 class TestSingleton(unittest.TestCase):
@@ -22,7 +22,6 @@ class TestSingleton(unittest.TestCase):
         self.assertEqual(b.i, 10)
         a.i = 100
         self.assertEqual(b.i, 100)
-
 
 if __name__ == '__main__':
     unittest.main()
